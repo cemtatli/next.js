@@ -1,11 +1,10 @@
 {
   "name": "nextjs14-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "A Next.js 14 boilerplate with TypeScript, ESLint, Prettier, Husky, Tailwind CSS",
   "author": {
     "name": "Your Name",
-    "email": "example@example.com",
     "url": "https://example.com"
   },
   "scripts": {
@@ -14,7 +13,8 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint ./src --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clear-cache": "rm -rf .next"
   },
   "husky": {
     "hooks": {
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
+    "cssnano": "^6.0.3",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.2",
     "husky": "^8.0.3",
