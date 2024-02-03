@@ -4,10 +4,10 @@ module.exports = {
   useTabs: false,
   semi: false,
   singleQuote: true,
-  trailingComma: 'none',
+  trailingComma: 'all',
   bracketSpacing: true,
   jsxBracketSameLine: false,
   proseWrap: 'always',
   endOfLine: 'auto',
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: ['prettier-plugin-tailwindcss']
 }

@@ -6,7 +6,7 @@ const config: Config = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '2rem'
+        DEFAULT: '2rem',
       },
       screens: {
         xs: '320px',
@@ -14,8 +14,8 @@ const config: Config = {
         md: '100%',
         lg: '1024px',
         xl: '1280px',
-        '2xl': '1440px'
-      }
+        '2xl': '1440px',
+      },
     },
     extend: {
       fontSize: {
@@ -28,10 +28,10 @@ const config: Config = {
         'text-3xl': 'clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem)',
         'text-4xl': 'clamp(3.05rem, 3.54vw + 2.17rem, 5rem)',
         'text-5xl': 'clamp(3.81rem, 5.18vw + 2.52rem, 6.66rem)',
-        'text-6xl': 'clamp(4.77rem, 7.48vw + 2.9rem, 8.88rem)'
-      }
-    }
+        'text-6xl': 'clamp(4.77rem, 7.48vw + 2.9rem, 8.88rem)',
+      },
+    },
   },
-  plugins: [require('@tailwindcss/container-queries')]
+  plugins: [require('@tailwindcss/container-queries'), require('./src/lib/text-highlight.js')],
 }
 export default config
