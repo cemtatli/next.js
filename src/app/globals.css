@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply min-h-dvh;
+    @apply min-h-dvh text-base;
   }
 
   h1,
