@@ -32,6 +32,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/container-queries'), require('./src/lib/text-highlight.js')],
+  plugins: [require('@tailwindcss/container-queries')],
 }
 export default config
