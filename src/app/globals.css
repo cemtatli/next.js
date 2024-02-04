@@ -2,25 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    @apply scroll-smooth antialiased;
-  }
+* {
+  @apply scroll-smooth antialiased;
+}
 
-  body {
-    @apply min-h-dvh text-base;
-  }
+body {
+  @apply min-h-dvh;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-balance;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-balance;
+}
 
-  p {
-    @apply text-pretty;
-  }
+p {
+  @apply text-pretty;
 }
