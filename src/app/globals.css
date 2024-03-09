@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply scroll-smooth antialiased;
-}
-
-body {
-  @apply min-h-dvh;
-}
-
 h1,
 h2,
 h3,

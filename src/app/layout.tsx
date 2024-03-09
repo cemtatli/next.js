@@ -21,9 +21,7 @@ const fontHeading = localFont({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('bg-background min-h-screen font-sans antialiased', fontSans.variable, fontHeading.variable)}>
-        {children}
-      </body>
+      <body className={cn('min-h-dvh font-sans antialiased', fontSans.variable, fontHeading.variable)}>{children}</body>
     </html>
   )
 }
