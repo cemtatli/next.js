@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx,json}', './src/components/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -30,8 +31,12 @@ const config: Config = {
         '5xl': 'clamp(3.81rem, 5.18vw + 2.52rem, 6.66rem)',
         '6xl': 'clamp(4.77rem, 7.48vw + 2.9rem, 8.88rem)',
       },
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        heading: ['var(--font-heading)', ...fontFamily.sans],
+      },
     },
   },
-  plugins: [require('@tailwindcss/container-queries')],
+  plugins: [require('@tailwindcss/container-queries'), require('@tailwindcss/typography')],
 }
 export default config

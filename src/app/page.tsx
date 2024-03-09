@@ -1,4 +1,10 @@
+import WelcomeText from '@/components/welcome-text'
+
 const Home = () => {
-  return <main>Hello world !</main>
+  return (
+    <main>
+      <WelcomeText />
+    </main>
+  )
 }
 export default Home
