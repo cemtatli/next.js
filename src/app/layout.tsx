@@ -10,11 +10,12 @@ import { sharedTitle, sharedDescription } from './shared-metadata'
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
+  fallback: ['system-ui', 'sans-serif'],
 })
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: '../../assets/fonts/CalSans-SemiBold.woff2',
+  src: '../assets/fonts/CalSans-SemiBold.woff2',
   variable: '--font-heading',
 })
 

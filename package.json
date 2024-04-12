@@ -4,8 +4,8 @@
   "private": true,
   "description": "A Next.js 14 boilerplate with TypeScript, ESLint, Prettier, Husky, Tailwind CSS",
   "author": {
-    "name": "Your Name",
-    "url": "https://example.com"
+    "name": "Cem Tatli",
+    "url": "https://git.new/tatli"
   },
   "scripts": {
     "dev": "next dev",
