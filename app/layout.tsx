@@ -3,7 +3,7 @@ import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
 
 import './globals.css'
-import { cn } from '@/lib/utils'
+import { cn } from '../lib/utils'
 
 import { sharedTitle, sharedDescription } from './shared-metadata'
 
