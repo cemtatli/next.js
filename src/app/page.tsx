@@ -1,10 +1,9 @@
-import WelcomeText from '@/components/welcome-text'
+import React from 'react'
 
-const Home = () => {
+const page = () => {
   return (
-    <main>
-      <WelcomeText />
-    </main>
+    <div>page</div>
   )
 }
-export default Home
+
+export default page

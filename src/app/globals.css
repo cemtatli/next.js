@@ -9,6 +9,6 @@
     text-rendering: optimizeLegibility;
   }
   body {
-    @apply min-h-dvh;
+    @apply min-h-dvh font-sans;
   }
 }
