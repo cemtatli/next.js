@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  swcMinify: true,
   images: {
     domains: ["", ""], // DOMAINS_HERE
     deviceSizes: [375, 480, 768, 1024, 1280, 1440, 1920], // DEVICE_SIZES_HERE
