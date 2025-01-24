@@ -1,3 +1,10 @@
-export const sharedTitle = 'Next.js 14 Starter Kit with TypeScript, Tailwind CSS, Husky and other goodies'
-export const sharedDescription =
-  'This is a Next.js 14 starter kit with TypeScript, Tailwind CSS, Husky, and other goodies'
+export const sharedMetadata = {
+  title: '',
+  description: '',
+  url: '',
+  ogImage: {
+    width: 1200,
+    height: 630,
+    type: ''
+  }
+}

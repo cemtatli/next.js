@@ -1,30 +1,32 @@
-import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx,json}', './src/components/**/*.{js,ts,jsx,tsx,mdx}'],
+export default {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     container: {
       center: true,
       padding: {
-        DEFAULT: '2rem',
+        DEFAULT: "2rem",
       },
       screens: {
-        xs: '375px',
-        sm: '480px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1440px',
+        xs: "375px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1440px",
       },
     },
     extend: {
-      fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
-        heading: ['var(--font-heading)', ...fontFamily.sans],
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [require('@tailwindcss/container-queries'), require('@tailwindcss/typography')],
-}
-export default config
+  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
+} satisfies Config;
