@@ -1,30 +1,32 @@
-import type { Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
-import localFont from 'next/font/local'
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { sharedMetadata } from "./shared-metadata";
+import "./globals.css";
 
-import './globals.css'
-import { cn } from '../lib/utils'
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-import { sharedTitle, sharedDescription } from './shared-metadata'
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  fallback: ['system-ui', 'sans-serif'],
-})
-
-// Font files can be colocated inside of `pages`
-const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-heading',
-})
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('min-h-dvh font-sans antialiased', fontSans.variable, fontHeading.variable)}>{children}</body>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
-  )
+  );
 }
 
 export const metadata: Metadata = {
@@ -34,16 +36,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   title: {
-    template: `%s — ${sharedTitle}`,
-    default: sharedTitle,
+    template: `%s — ${sharedMetadata.title}`,
+    default: sharedMetadata.title,
   },
-  description: sharedDescription,
+  description: sharedMetadata.description,
   openGraph: {
     title: {
-      template: `%s — ${sharedTitle}`,
-      default: sharedTitle,
+      template: `%s — ${sharedMetadata.title}`,
+      default: sharedMetadata.title,
     },
-    description: sharedDescription,
+    description: sharedMetadata.description,
     images: [
       {
         url: 'image-url',
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
     ],
     type: 'website',
     url: '/',
-    siteName: sharedTitle,
+    siteName: sharedMetadata.title,
     locale: 'en_US',
   },
 }

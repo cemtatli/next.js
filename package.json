@@ -1,66 +1,39 @@
 {
-  "name": "nextjs14-boilerplate",
-  "version": "0.1.1",
+  "name": "next.js",
+  "version": "0.1.0",
   "private": true,
-  "description": "A Next.js 14 boilerplate with TypeScript, ESLint, Prettier, Husky, Tailwind CSS",
-  "author": {
-    "name": "Cem Tatli",
-    "url": "https://git.new/tatli"
-  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint ./src --fix",
-    "prepare": "husky install",
+    "prettier": "prettier --write \"**/*.{html,js,jsx,json,md,mdx,mjs}\"",
     "clear-cache": "rm -rf .next"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.tsx": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
   "dependencies": {
-    "@tailwindcss/container-queries": "^0.1.1",
-    "clsx": "^2.1.0",
-    "cssnano": "^6.0.3",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.2",
-    "husky": "^8.0.3",
-    "next": "14.2.5",
-    "prettier": "^3.2.4",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwind-merge": "^2.2.1"
+    "@tailwindcss/postcss": "^4.0.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.0.5",
+    "next": "15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.0.4",
-    "@tailwindcss/typography": "^0.5.10",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-tailwindcss": "^3.14.1",
-    "eslint-plugin-typescript": "^0.14.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cssnano": "^6.1.1",
+    "cssnano-preset-advanced": "^6.1.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "postcss": "^8.5.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5"
   }
 }
